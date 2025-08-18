@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>DGaze: CNN-Based Gaze Prediction in Dynamic Scenes</title>
+        <link rel="stylesheet" media="all" href="./index/css/main_v2.css" />
+        <link rel="stylesheet" media="all" href="./hu20_dgaze/css/owl.carousel.min.css" />
+        <link rel="stylesheet" media="all" href="./hu20_dgaze/css/owl.theme.default.min.css" />
+        <link rel="stylesheet" media="all" href="./hu20_dgaze/css/jquery-ui.min.css" />
+        <script src="./hu20_dgaze/js/jquery-3.4.1.min.js"></script>
+        <script src="./hu20_dgaze/js/jquery-ui.min.js"></script>
+        <script src="./hu20_dgaze/js/fontawesome-5.11.2.js"></script>
+        <script src="./hu20_dgaze/js/main.js"></script>
+        <script src="./hu20_dgaze/js/owl.carousel.min.js"></script>
+        <script src="./hu20_dgaze/js/rot13.js"></script>
+		<script src="https://www.w3counter.com/tracker.js?id=150008"></script>
+    </head>
+    <body class="header header-location">
+        <div class="wrapper">
+            <!-- header -->
+            <div id="unstickyheader" class="unstickyheader">
+                
+            </div>
+        </div>
+        
+
+        <!-- content -->
+        <div class="content">
+        <div class="section margin-top-20 margin-bottom-40">
+    <div class="container">
+
+        <h3>DGaze: CNN-Based Gaze Prediction in Dynamic Scenes</h3>
+
+        <h4>
+        
+            <a class="a-int" href="https://cranehzm.github.io/">Zhiming Hu</a>, 
+            Sheng Li,
+            <a class="a-int" href="https://cong-yi.github.io/">Congyi Zhang</a>,
+            Kangrui Yi, Guoping Wang,
+            <a class="a-int" href="https://www.cs.umd.edu/people/dmanocha">Dinesh Manocha</a>
+        </h4>
+
+        <h4>
+			<span class="pub_additional_journal">IEEE Transactions on Visualization and Computer Graphics (TVCG, IEEE VR 2020 Journal-track), 2020, 26(5): 1902-1911.
+			</span>		
+        </h4>
+		
+		<hr>
+		<img src="./hu20_dgaze/image/teaser.png" style="height:auto; width:1024px;" class="centerContent"><br>
+		<i class="centerContent"></i>            
+        <hr>
+
+        <h4>Abstract</h4>
+
+        We conduct novel analyses of users’ gaze behaviors in dynamic virtual scenes and, based on our analyses, we present a novel CNN-based model called DGaze for gaze prediction in HMD-based applications. We first collect 43 users’ eye tracking data in 5 dynamic scenes under free-viewing conditions. Next, we perform statistical analysis of our data and observe that dynamic object positions, head rotation velocities, and salient regions are correlated with users’ gaze positions. Based on our analysis, we present a CNN-based model (DGaze) that combines object position sequence, head velocity sequence, and saliency features to predict users’ gaze positions. Our model can be applied to predict not only realtime gaze positions but also gaze positions in the near future and can achieve better performance than prior method. In terms of realtime prediction, DGaze achieves a 22.0% improvement over prior method in dynamic scenes and obtains an improvement of 9.5% in static scenes, based on using the angular distance as the evaluation metric. We also propose a variant of our model called DGaze_ET that can be used to predict future gaze positions with higher precision by combining accurate past gaze data gathered using an eye tracker. We further analyze our CNN architecture and verify the effectiveness of each component in our model. We apply DGaze to gaze-contingent rendering and a game, and also present the evaluation results from a user study.
+
+        <hr>
+
+        <h4>Presentation Video</h4>
+        <object type='application/x-shockwave-flash' style='width:1024px; height:576px;' data='https://www.youtube.com/v/RQKNGtL_89M' class="centerContent">
+        <param name='movie' value='https://www.youtube.com/v/RQKNGtL_89M' />
+        </object>                
+        <br>
+
+        <h4>Demo Video</h4>
+        <object type='application/x-shockwave-flash' style='width:1024px; height:576px;' data='https://www.youtube.com/v/Ul1TZBgXXik' class="centerContent">
+        <param name='movie' value='https://www.youtube.com/v/Ul1TZBgXXik' />
+        </object>
+        
+      
+
+        <hr>
+
+        <h4>Links</h4>
+        <div class="pub_links">
+            
+            <i class="fa fa-fingerprint"></i><p>Doi: <a class="a-text-ext" href="http://dx.doi.org/10.1109/TVCG.2020.2973473" rel="nofollow" target="_blank">doi</a></p>
+            
+            
+            <i class="fa fa-file-pdf"></i><p>Paper: <a class="pub_list" href="./hu20_dgaze/pdf/hu20_dgaze.pdf">paper.pdf</a></p>
+          
+            <i class="fa fa-link"></i><p>Code: <a class="a-text-ext" href="https://github.com/CraneHzm/DGaze" rel="nofollow" target="_blank">code</a></p>            
+          
+            <i class="fa fa-link"></i><p>Dataset: <a class="a-text-ext" href="https://chinapku-my.sharepoint.com/:f:/g/personal/1701111311_pku_edu_cn/Eotz_w-ZvT1FiSXY7SJCoCkBtdmeEwZG2APqqARB4NGSNw?e=aoIGwC" rel="nofollow" target="_blank">dataset</a></p>
+          
+            <i class="fa fa-file-pdf"></i>&nbsp;Slides: <a class="pub_list" href="./hu20_dgaze/ppt/hu20_dgaze.pdf">slides.pdf</a></p>
+          
+            <i class="fa fa-link"></i><p>Experimental scenes: <a class="a-text-ext" href="https://chinapku-my.sharepoint.com/:f:/g/personal/1701111311_pku_edu_cn/EjntedyAOqdOj4Wt5KDCOb8BdZG6qNll7DPAq8WswkGJCQ?e=KevTHH" rel="nofollow" target="_blank">experimental scenes</a></p>
+          
+            <i class="fa fa-link"></i><p>Supplementary materials: <a class="a-text-ext" href="https://chinapku-my.sharepoint.com/:u:/g/personal/1701111311_pku_edu_cn/EXHt844HL9JJplZxxosnYM4BKuM24mNQj4YrWROd6N6lOQ?e=bCsJ8K" rel="nofollow" target="_blank">supplementary materials</a></p>
+          </div>
+
+        <hr>
+
+        <h4>BibTeX</h4>
+
+<div class="pub_bibtex bg_grey">@article{hu20dgaze,
+	title = {DGaze: CNN-Based Gaze Prediction in Dynamic Scenes},
+	author = {Hu, Zhiming and Li, Sheng and Zhang, Congyi and Yi, Kangrui and Wang, Guoping and Manocha, Dinesh},
+	journal = {IEEE Transactions on Visualization and Computer Graphics},
+	volume = {26},
+	number = {5},
+	pages = {1902--1911},
+	year = {2020},
+	doi = {10.1109/TVCG.2020.2973473}}
+</div>
+
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- footer -->
+        <div id="footer" class="footer-v1">
+            
+            <div class="copyright custom-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                
+                                <span class="custom-copyright-container">
+                                    
+                                    Last modified: 28/06/2023
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>

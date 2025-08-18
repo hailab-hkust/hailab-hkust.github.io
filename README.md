@@ -1,1 +1,1 @@
-# hailab-hkust.github.io
+Website of the HAI Lab at HKUST (GZ).
