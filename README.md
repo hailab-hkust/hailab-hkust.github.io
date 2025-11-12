@@ -1,1 +1,1 @@
-Website of the HAI Lab at HKUST (GZ).
+I am Zhiming Hu, this is my personal web page.
