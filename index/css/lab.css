@@ -31,7 +31,7 @@
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
   --radius: 12px;
-  --max-width: 1540px;
+  --max-width: 1180px;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -58,7 +58,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 0.94rem;
   line-height: 1.65;
   color: var(--color-text);
   background: var(--color-bg);
@@ -101,7 +101,7 @@ img {
 
 .site-logo {
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.22rem;
   color: var(--color-primary);
   text-decoration: none;
 }
@@ -123,7 +123,7 @@ img {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: var(--color-text);
   border-radius: 8px;
   text-decoration: none;
@@ -333,19 +333,19 @@ img {
 }
 
 .hero--cover h1 {
-  max-width: 980px;
+  max-width: 800px;
   margin: 0 0 1.2rem;
   color: #fff;
-  font-size: clamp(2.7rem, 7vw, 5.7rem);
+  font-size: clamp(2.05rem, 4.8vw, 3.75rem);
   line-height: 1.05;
   letter-spacing: -0.055em;
   text-wrap: balance;
 }
 
 .hero--cover .hero__subtitle {
-  max-width: 760px;
+  max-width: 620px;
   color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-size: clamp(0.92rem, 1.25vw, 1.05rem);
   line-height: 1.65;
 }
 
@@ -390,14 +390,14 @@ img {
 .research-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 1.05rem;
 }
 
 .research-card {
   position: relative;
-  min-height: 250px;
-  padding: 1.6rem;
-  border-radius: 18px;
+  min-height: 215px;
+  padding: 1.25rem;
+  border-radius: 15px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(226, 232, 240, 0.88);
   box-shadow: 0 18px 45px rgba(var(--theme-primary-rgb), 0.09);
@@ -412,11 +412,11 @@ img {
 
 .research-card__index {
   display: inline-flex;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.25rem;
+  height: 2.25rem;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
   border-radius: 50%;
   color: #fff;
   background: var(--color-primary);
@@ -425,9 +425,9 @@ img {
 }
 
 .research-card h3 {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.65rem;
   color: var(--color-primary);
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
@@ -435,7 +435,7 @@ img {
 .research-card p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.96rem;
+  font-size: 0.9rem;
 }
 
 /* Scroll reveal: JS adds .reveal-enabled, so content stays visible if JS fails. */
@@ -486,7 +486,7 @@ img {
   max-width: 760px;
   margin: 0 0 1rem;
   color: #fff;
-  font-size: clamp(2.3rem, 6vw, 4rem);
+  font-size: clamp(1.8rem, 4.3vw, 2.85rem);
   line-height: 1.02;
   letter-spacing: -0.04em;
 }
@@ -495,7 +495,7 @@ img {
   max-width: 720px;
   margin: 0;
   color: rgba(255, 255, 255, 0.86);
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 
 .page-hero .section-label {
@@ -510,7 +510,7 @@ img {
 .member-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.7rem;
+  gap: 1.3rem;
 }
 
 .member-card {
@@ -529,8 +529,8 @@ img {
 
 .member-card__photo {
   display: block;
-  width: 90%;
-  margin: 0 auto 1.25rem;
+  width: 100%;
+  margin: 0 0 0.95rem;
   aspect-ratio: 1 / 1;
   border-radius: 0;
   object-fit: cover;
@@ -538,10 +538,15 @@ img {
   box-shadow: 0 10px 28px rgba(var(--theme-primary-rgb), 0.08);
 }
 
+.member-card__body {
+  width: 100%;
+  text-align: left;
+}
+
 .member-card h3 {
-  margin: 0 0 0.75rem;
+  margin: 0;
   color: #0f172a;
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   line-height: 1.25;
 }
 
@@ -567,7 +572,7 @@ img {
 }
 
 .member-profile-hero {
-  padding: 4.5rem 0;
+  padding: 3.6rem 0;
   background:
     linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.96), rgba(15, 23, 42, 0.92)),
     url("../../figs/home/home1.png") center / cover;
@@ -576,10 +581,10 @@ img {
 
 .member-profile-panel {
   display: grid;
-  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-  gap: 2.3rem;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 1.9rem;
   align-items: center;
-  max-width: 1120px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -593,36 +598,36 @@ img {
 
 .member-profile-role {
   display: inline-block;
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.5rem;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .member-profile-panel h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.8rem;
   color: #fff;
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 1;
+  font-size: clamp(1.8rem, 3.3vw, 2.45rem);
+  line-height: 1.08;
   letter-spacing: -0.04em;
 }
 
 .member-profile-bio {
-  max-width: 760px;
-  margin: 0 0 1rem;
+  max-width: 700px;
+  margin: 0 0 0.8rem;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.9rem;
+  line-height: 1.68;
 }
 
 .member-profile-meta {
   display: grid;
-  gap: 0.35rem;
-  margin-top: 1.25rem;
+  gap: 0.28rem;
+  margin-top: 1rem;
   color: rgba(255, 255, 255, 0.84);
-  font-size: 0.95rem;
+  font-size: 0.86rem;
 }
 
 .member-profile-meta a {
@@ -677,7 +682,7 @@ img {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -713,14 +718,14 @@ img {
 }
 
 .project-card__body {
-  padding: 1.25rem 1.35rem 1.35rem;
+  padding: 1rem 1.15rem 1.1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .project-card__title {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--color-primary);
   margin: 0 0 0.5rem;
@@ -751,16 +756,16 @@ img {
 
 /* Projects page: use a readable one-project-per-row layout. */
 .projects-page .project-grid {
-  max-width: 1300px;
+  max-width: 1060px;
   margin: 0 auto;
   grid-template-columns: 1fr;
-  gap: 1.35rem;
+  gap: 1.1rem;
 }
 
 .projects-page .project-card {
   display: grid;
-  grid-template-columns: minmax(260px, 36%) minmax(0, 1fr);
-  height: 260px;
+  grid-template-columns: minmax(220px, 32%) minmax(0, 1fr);
+  height: 220px;
 }
 
 .projects-page .project-card__image {
@@ -770,11 +775,11 @@ img {
 
 .projects-page .project-card__body {
   justify-content: center;
-  padding: 1.55rem 1.8rem;
+  padding: 1.05rem 1.35rem;
 }
 
 .projects-page .project-card__title {
-  font-size: clamp(1.08rem, 1.8vw, 1.32rem);
+  font-size: clamp(0.92rem, 1.35vw, 1.05rem);
   color: #0f172a;
 }
 
@@ -789,8 +794,8 @@ img {
 /* —— Teaching —— */
 .teaching-layout {
   display: grid;
-  gap: 2rem;
-  max-width: 1120px;
+  gap: 1.35rem;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
@@ -799,24 +804,24 @@ img {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
-  padding: 2rem;
+  padding: 1.55rem;
 }
 
 .teaching-block__header {
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
 }
 
 .teaching-block__header h2 {
   margin: 0;
   color: var(--color-primary);
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
   line-height: 1.2;
 }
 
 .course-card {
   position: relative;
-  padding: 1.55rem;
-  border-radius: 16px;
+  padding: 1.2rem;
+  border-radius: 14px;
   background:
     linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.055), rgba(var(--theme-primary-light-rgb), 0.035)),
     #fff;
@@ -827,7 +832,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .course-card__tag,
@@ -856,7 +861,7 @@ img {
 .course-card h3 {
   margin: 0 0 0.75rem;
   color: #0f172a;
-  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-size: clamp(1.03rem, 1.85vw, 1.32rem);
   line-height: 1.25;
 }
 
@@ -873,7 +878,7 @@ img {
 }
 
 .empty-teaching-card {
-  padding: 1.35rem 1.5rem;
+  padding: 1.1rem 1.2rem;
   border: 1px dashed rgba(var(--theme-primary-rgb), 0.3);
   border-radius: 16px;
   color: var(--color-text-muted);
@@ -888,20 +893,25 @@ img {
 
 .person-card {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
+  grid-template-columns: 170px 1fr;
+  gap: 1.45rem;
+  align-items: center;
   background: var(--color-card);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1.55rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
 }
 
 .person-card__photo {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
+  display: block;
+  justify-self: center;
+  align-self: center;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center center;
   box-shadow: var(--shadow-sm);
 }
 
@@ -919,23 +929,25 @@ img {
   padding: 1rem;
 }
 
+.person-card h2,
 .person-card h3 {
   margin: 0 0 0.25rem;
-  font-size: 1.5rem;
+  font-size: 1.28rem;
   color: var(--color-primary);
+  line-height: 1.2;
 }
 
 .person-card__role {
   font-weight: 600;
   color: var(--color-accent);
-  margin: 0 0 1rem;
-  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
 }
 
 .person-card__bio {
   margin: 0 0 1rem;
   color: var(--color-text-muted);
-  font-size: 0.98rem;
+  font-size: 0.9rem;
 }
 
 .person-card__links {
@@ -959,7 +971,7 @@ img {
 .prose-block {
   background: var(--color-card);
   border-radius: var(--radius);
-  padding: 2rem 2.25rem;
+  padding: 1.55rem 1.75rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
   margin-bottom: 1.5rem;
@@ -992,15 +1004,15 @@ img {
 .highlight-box {
   background: #fff5f5;
   border-left: 4px solid var(--color-accent);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+  padding: 0.85rem 1rem;
+  margin: 1.15rem 0;
   border-radius: 0 8px 8px 0;
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 1rem;
   margin: 1rem 0 0;
 }
 
@@ -1010,7 +1022,7 @@ img {
 
 .benefit-card {
   background: #f8fafc;
-  padding: 1.25rem;
+  padding: 1rem;
   border-radius: var(--radius);
   box-shadow: none;
   border: 1px solid var(--color-border);
@@ -1092,7 +1104,7 @@ img {
 
   .projects-page .project-card {
     grid-template-columns: minmax(210px, 40%) minmax(0, 1fr);
-    min-height: 210px;
+    height: 210px;
   }
 
   .research-grid {
@@ -1175,16 +1187,16 @@ img {
   }
 
   .member-profile-hero {
-    padding: 3.25rem 0;
+    padding: 2.6rem 0;
   }
 
   .member-profile-panel {
     grid-template-columns: 1fr;
-    gap: 1.6rem;
+    gap: 1.25rem;
   }
 
   .member-profile-photo {
-    max-width: 260px;
+    max-width: 220px;
   }
 
   .benefits-grid {
@@ -1197,6 +1209,7 @@ img {
 
   .projects-page .project-card {
     grid-template-columns: 1fr;
+    height: auto;
     min-height: auto;
   }
 
@@ -1206,13 +1219,13 @@ img {
   }
 
   .projects-page .project-card__body {
-    padding: 1.25rem 1.35rem 1.4rem;
+    padding: 1rem 1.15rem 1.15rem;
   }
 }
 
 @media (max-width: 520px) {
   .site-logo {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .hero--cover {
@@ -1225,7 +1238,7 @@ img {
   }
 
   .hero--cover h1 {
-    font-size: clamp(2.45rem, 15vw, 4rem);
+    font-size: clamp(1.9rem, 11.5vw, 3rem);
   }
 
   .hero__kicker {
