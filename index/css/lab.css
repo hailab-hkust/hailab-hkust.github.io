@@ -438,6 +438,78 @@ img {
   font-size: 0.9rem;
 }
 
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-heading .section-title {
+  margin-bottom: 0;
+}
+
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 0.48rem 0.9rem;
+  border: 1px solid rgba(var(--theme-primary-rgb), 0.16);
+  border-radius: 999px;
+  color: var(--color-primary);
+  background: rgba(var(--theme-primary-rgb), 0.04);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.32);
+  background: rgba(var(--theme-primary-rgb), 0.08);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.news-overview {
+  background:
+    radial-gradient(circle at 88% 8%, rgba(var(--theme-primary-rgb), 0.08), transparent 24rem),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 5.8rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 36px rgba(var(--theme-primary-rgb), 0.07);
+}
+
+.news-item time {
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.news-item p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 /* Scroll reveal: JS adds .reveal-enabled, so content stays visible if JS fails. */
 .reveal-enabled .reveal {
   opacity: 0;
@@ -707,14 +779,14 @@ img {
 
 .project-card__image {
   aspect-ratio: 16 / 9;
-  background: #edf2f7;
+  background: #fff;
   overflow: hidden;
 }
 
 .project-card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .project-card__body {
@@ -739,6 +811,29 @@ img {
   margin: 0 0 0.5rem;
 }
 
+.project-card__award {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.45rem;
+  padding-bottom: 0.1rem;
+  color: #f0ad4e;
+  font-size: 0.85rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.project-card__award::before {
+  content: "";
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  flex: 0 0 auto;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M97.12 362.63c-8.69-8.69-4.16-6.24-25.12-11.85-9.51-2.55-17.87-7.45-25.43-13.32L1.2 448.7c-4.39 10.77 3.81 22.47 15.43 22.03l52.69-2.01L105.56 507c8 8.44 22.04 5.81 26.43-4.96l52.05-127.62c-10.84 6.04-22.87 9.58-35.31 9.58-19.5 0-37.82-7.59-51.61-21.37zM382.8 448.7l-45.37-111.24c-7.56 5.88-15.92 10.77-25.43 13.32-21.07 5.64-16.45 3.18-25.12 11.85-13.79 13.78-32.12 21.37-51.62 21.37-12.44 0-24.47-3.55-35.31-9.58L252 502.04c4.39 10.77 18.44 13.4 26.43 4.96l36.25-38.28 52.69 2.01c11.62.44 19.82-11.27 15.43-22.03zM263 340c15.28-15.55 17.03-14.21 38.79-20.14 13.89-3.79 24.75-14.84 28.47-28.98 7.48-28.4 5.54-24.97 25.95-45.75 10.17-10.35 14.14-25.44 10.42-39.58-7.47-28.38-7.48-24.42 0-52.83 3.72-14.14-.25-29.23-10.42-39.58-20.41-20.78-18.47-17.36-25.95-45.75-3.72-14.14-14.58-25.19-28.47-28.98-27.88-7.61-24.52-5.62-44.95-26.41-10.17-10.35-25-14.4-38.89-10.61-27.87 7.6-23.98 7.61-51.9 0-13.89-3.79-28.72.25-38.89 10.61-20.41 20.78-17.05 18.8-44.94 26.41-13.89 3.79-24.75 14.84-28.47 28.98-7.47 28.39-5.54 24.97-25.95 45.75-10.17 10.35-14.15 25.44-10.42 39.58 7.47 28.36 7.48 24.4 0 52.82-3.72 14.14.25 29.23 10.42 39.59 20.41 20.78 18.47 17.35 25.95 45.75 3.72 14.14 14.58 25.19 28.47 28.98C104.6 325.96 106.27 325 121 340c13.23 13.47 33.84 15.88 49.74 5.82a39.676 39.676 0 0 1 42.53 0c15.89 10.06 36.5 7.65 49.73-5.82zM97.66 175.96c0-53.03 42.24-96.02 94.34-96.02s94.34 42.99 94.34 96.02-42.24 96.02-94.34 96.02-94.34-42.99-94.34-96.02z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M97.12 362.63c-8.69-8.69-4.16-6.24-25.12-11.85-9.51-2.55-17.87-7.45-25.43-13.32L1.2 448.7c-4.39 10.77 3.81 22.47 15.43 22.03l52.69-2.01L105.56 507c8 8.44 22.04 5.81 26.43-4.96l52.05-127.62c-10.84 6.04-22.87 9.58-35.31 9.58-19.5 0-37.82-7.59-51.61-21.37zM382.8 448.7l-45.37-111.24c-7.56 5.88-15.92 10.77-25.43 13.32-21.07 5.64-16.45 3.18-25.12 11.85-13.79 13.78-32.12 21.37-51.62 21.37-12.44 0-24.47-3.55-35.31-9.58L252 502.04c4.39 10.77 18.44 13.4 26.43 4.96l36.25-38.28 52.69 2.01c11.62.44 19.82-11.27 15.43-22.03zM263 340c15.28-15.55 17.03-14.21 38.79-20.14 13.89-3.79 24.75-14.84 28.47-28.98 7.48-28.4 5.54-24.97 25.95-45.75 10.17-10.35 14.14-25.44 10.42-39.58-7.47-28.38-7.48-24.42 0-52.83 3.72-14.14-.25-29.23-10.42-39.58-20.41-20.78-18.47-17.36-25.95-45.75-3.72-14.14-14.58-25.19-28.47-28.98-27.88-7.61-24.52-5.62-44.95-26.41-10.17-10.35-25-14.4-38.89-10.61-27.87 7.6-23.98 7.61-51.9 0-13.89-3.79-28.72.25-38.89 10.61-20.41 20.78-17.05 18.8-44.94 26.41-13.89 3.79-24.75 14.84-28.47 28.98-7.47 28.39-5.54 24.97-25.95 45.75-10.17 10.35-14.15 25.44-10.42 39.58 7.47 28.36 7.48 24.4 0 52.82-3.72 14.14.25 29.23 10.42 39.59 20.41 20.78 18.47 17.35 25.95 45.75 3.72 14.14 14.58 25.19 28.47 28.98C104.6 325.96 106.27 325 121 340c13.23 13.47 33.84 15.88 49.74 5.82a39.676 39.676 0 0 1 42.53 0c15.89 10.06 36.5 7.65 49.73-5.82zM97.66 175.96c0-53.03 42.24-96.02 94.34-96.02s94.34 42.99 94.34 96.02-42.24 96.02-94.34 96.02-94.34-42.99-94.34-96.02z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 .project-card__authors {
   font-size: 0.94rem;
   color: var(--color-text);
@@ -754,7 +849,45 @@ img {
   margin: 0;
 }
 
-/* Projects page: use a readable one-project-per-row layout. */
+.publication-groups {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.75rem;
+}
+
+.publication-group__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(var(--theme-primary-rgb), 0.16);
+}
+
+.publication-group__header h2 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.publication-group__header span {
+  display: inline-flex;
+  min-width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(var(--theme-primary-rgb), 0.08);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* Publications page: use a readable one-paper-per-row layout. */
 .projects-page .project-grid {
   max-width: 1060px;
   margin: 0 auto;
@@ -762,15 +895,20 @@ img {
   gap: 1.1rem;
 }
 
+.publications-page .project-grid {
+  max-width: none;
+}
+
 .projects-page .project-card {
   display: grid;
-  grid-template-columns: minmax(220px, 32%) minmax(0, 1fr);
-  height: 220px;
+  grid-template-columns: minmax(260px, 34%) minmax(0, 1fr);
+  align-items: center;
 }
 
 .projects-page .project-card__image {
-  aspect-ratio: auto;
-  height: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  align-self: center;
 }
 
 .projects-page .project-card__body {
@@ -893,7 +1031,7 @@ img {
 
 .person-card {
   display: grid;
-  grid-template-columns: 170px 1fr;
+  grid-template-columns: 190px 1fr;
   gap: 1.45rem;
   align-items: center;
   background: var(--color-card);
@@ -904,15 +1042,16 @@ img {
 }
 
 .person-card__photo {
-  width: 170px;
-  height: 170px;
+  width: 165px;
+  height: auto;
+  max-height: 215px;
   display: block;
   justify-self: center;
   align-self: center;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center center;
-  box-shadow: var(--shadow-sm);
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center top;
+  box-shadow: none;
 }
 
 .person-card__photo--placeholder {
@@ -1104,7 +1243,6 @@ img {
 
   .projects-page .project-card {
     grid-template-columns: minmax(210px, 40%) minmax(0, 1fr);
-    height: 210px;
   }
 
   .research-grid {
@@ -1178,6 +1316,21 @@ img {
 
   .research-card {
     min-height: auto;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
   }
 
   .member-grid {
