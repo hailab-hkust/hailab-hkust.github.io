@@ -16,6 +16,78 @@
     });
   }
 
+  var publicationFilter = document.querySelector('.publication-filter');
+
+  if (publicationFilter) {
+    var publicationCategoryLabels = {
+      'human-centered-ai': 'Human-centered AI',
+      'human-behavior-modeling': 'Human behavior modeling',
+      'eye-tracking': 'Eye tracking',
+      'virtual-and-augmented-reality': 'Virtual and augmented reality',
+      'human-computer-interaction': 'Human-computer interaction',
+      'human-ai-interaction': 'Human-AI interaction'
+    };
+    var filterButtons = Array.prototype.slice.call(publicationFilter.querySelectorAll('[data-filter]'));
+    var publicationCards = Array.prototype.slice.call(document.querySelectorAll('.publication-list .project-card[data-category]'));
+    var publicationGroups = Array.prototype.slice.call(document.querySelectorAll('.publication-group'));
+
+    document.querySelectorAll('.publication-list').forEach(function (list) {
+      Array.prototype.slice.call(list.querySelectorAll('.project-card[data-category]')).forEach(function (card, index) {
+        card.style.setProperty('--reveal-delay', String((index % 6) * 60) + 'ms');
+      });
+    });
+
+    publicationCards.forEach(function (card) {
+      var category = card.getAttribute('data-category');
+      var label = publicationCategoryLabels[category] || category;
+      var body = card.querySelector('.project-card__body');
+      var venue = card.querySelector('.project-card__venue');
+      var awardRow = card.querySelector('.project-card__award-row');
+      var existingTag = card.querySelector('.publication-tag');
+      var tag = existingTag || document.createElement('span');
+
+      tag.className = 'publication-tag';
+      tag.textContent = label;
+
+      if (!existingTag && body) {
+        body.insertBefore(tag, awardRow ? awardRow.nextSibling : (venue ? venue.nextSibling : body.firstChild));
+      }
+    });
+
+    function applyPublicationFilter(filter) {
+      filterButtons.forEach(function (button) {
+        var active = button.getAttribute('data-filter') === filter;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      publicationCards.forEach(function (card) {
+        var matches = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.classList.toggle('is-filtered-out', !matches);
+      });
+
+      publicationGroups.forEach(function (group) {
+        var visibleCards = group.querySelectorAll('.project-card[data-category]:not(.is-filtered-out)');
+        var count = visibleCards.length;
+        var countBadge = group.querySelector('.publication-group__count');
+
+        group.classList.toggle('is-filtered-out', count === 0);
+
+        if (countBadge) {
+          countBadge.textContent = String(count);
+        }
+      });
+    }
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        applyPublicationFilter(button.getAttribute('data-filter'));
+      });
+    });
+
+    applyPublicationFilter('all');
+  }
+
   var revealItems = document.querySelectorAll('.reveal');
 
   if (!revealItems.length) {

@@ -78,7 +78,7 @@ For **hailabt.github.io only**, you do **not** need a `CNAME` file.
 | Path | Purpose |
 |------|---------|
 | `index.html` | Lab homepage |
-| `projects.html` | Featured project cards |
+| `publications.html` | Publications page |
 | `teaching.html` | Courses and undergraduate project opportunities |
 | `people.html` | Lab director and team members |
 | `join_us.html` | Recruiting / application guide |
