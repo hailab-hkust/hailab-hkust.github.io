@@ -15,16 +15,16 @@ After the first deploy, please replace or add the following items yourself.
 
 | Section | Action |
 |---------|--------|
-| **People → Lab members** | Remove the placeholder block in `people.html` and add cards for PhD / Master / Postdoc / RA / alumni |
+| **People → Lab members** | Add or move cards in `people.html`; use the Alumni section for former lab members |
 | **Join Us** | Adjust recruiting text, deadlines, and application links in `join_us.html` to match current university policies |
 | **Publications** | Add/remove publication cards in `publications.html`; link card URLs to `publications/<project-id>.html` detail pages and card images to lightweight `projects/<project-id>/image/thumb-card.webp` files |
-| **Teaching** | Add courses or undergraduate project topics in `teaching.html`; duplicate existing `course-card` or `empty-teaching-card` blocks as needed |
+| **Teaching** | Add courses or undergraduate project topics in `teaching.html`; duplicate the existing `course-card` or add items to `student-project-list` |
 | **Home research tags** | Update the six research cards in `index.html` as lab directions evolve |
 | **Footer** | Update copyright year, WeChat official account link if desired |
 
 ## Optional links
 
-- Add an “All publications” link in the Publications section pointing to `profile.html` or an external list
+- Add an external “All publications” link in the Publications section if needed
 - Add university / thrust logos in the footer (save under `figs/logos/`)
 
 ## Publication thumbnails
@@ -41,8 +41,8 @@ ffmpeg -y -i projects/<project-id>/image/thumb.png -vf "thumbnail,scale='min(640
 
 ## Repository / domain
 
-- Rename GitHub remote repo to **`https://hailab.net.cn`** before going live
-- Remove any old `CNAME` pointing to deprecated domains unless you intentionally use a custom domain
+- Keep the root `CNAME` file set to `hailab.net.cn`
+- Remove deprecated domain references unless they are kept intentionally for documentation
 
 ## Do not change (unless intentional)
 
