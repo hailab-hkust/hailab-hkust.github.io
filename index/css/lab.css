@@ -986,19 +986,40 @@ img {
   max-width: calc(100% - 18.5rem);
 }
 
-.publication-tag {
+.publications-page .project-card.has-multiple-publication-tags .project-card__venue {
+  max-width: calc(100% - 20rem);
+}
+
+.publication-tags {
   position: absolute;
   top: 0.95rem;
   right: 1.35rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 0.3rem;
   box-sizing: border-box;
-  width: 17rem;
-  max-width: calc(100% - 2.7rem);
-  padding: 0.34rem 0.72rem;
+  max-width: min(25rem, calc(100% - 2.7rem));
+}
+
+.publications-page .project-card.has-multiple-publication-tags .publication-tags {
+  max-width: 58%;
+}
+
+.publication-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  min-height: 1.48rem;
+  padding: 0.28rem 0.58rem;
   border: 1px solid rgba(var(--theme-primary-rgb), 0.16);
   border-radius: 999px;
   background: rgba(var(--theme-primary-rgb), 0.07);
   color: var(--color-primary);
-  font-size: clamp(0.62rem, 0.85vw, 0.72rem);
+  font-size: clamp(0.58rem, 0.78vw, 0.67rem);
   font-weight: 800;
   line-height: 1;
   text-align: center;
@@ -1489,12 +1510,16 @@ img {
     flex: 1 1 auto;
   }
 
-  .publication-tag {
+  .publication-tags {
     position: static;
-    display: inline-flex;
-    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
     max-width: 100%;
     margin: -0.15rem 0 0.65rem;
+  }
+
+  .publication-tag {
     white-space: nowrap;
   }
 

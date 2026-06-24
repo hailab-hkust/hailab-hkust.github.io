@@ -31,7 +31,7 @@ After the first deploy, please replace or add the following items yourself.
 
 - Keep original `thumb.png`, `thumb.gif`, and `teaser.png` files for project detail pages.
 - Use `thumb-card.webp` only for publication listing cards. Aim for each file to stay below 300 KB.
-- For each publication card, set only `data-category` to one of the six research-direction filters used in `publications.html`; the visible tag and reveal delay are generated automatically by `index/js/lab-nav.js`.
+- For each publication card, set only `data-category` to one or two of the six research-direction filters used in `publications.html`; separate multiple categories with a space, for example `data-category="eye-tracking virtual-and-augmented-reality"`. The visible tags and reveal delay are generated automatically by `index/js/lab-nav.js`.
 - Publication group counts are also generated automatically; do not manually edit the number badges in `publications.html`.
 - To create a card thumbnail from an existing `thumb` file:
 
