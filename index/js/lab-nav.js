@@ -31,6 +31,15 @@
     var publicationCards = Array.prototype.slice.call(document.querySelectorAll('.publication-list .project-card[data-category]'));
     var publicationGroups = Array.prototype.slice.call(document.querySelectorAll('.publication-group'));
 
+    function getPublicationCategories(card) {
+      return (card.getAttribute('data-category') || '')
+        .split(/[\s,]+/)
+        .filter(function (category, index, categories) {
+          return category && categories.indexOf(category) === index;
+        })
+        .slice(0, 2);
+    }
+
     document.querySelectorAll('.publication-list').forEach(function (list) {
       Array.prototype.slice.call(list.querySelectorAll('.project-card[data-category]')).forEach(function (card, index) {
         card.style.setProperty('--reveal-delay', String((index % 6) * 60) + 'ms');
@@ -38,19 +47,26 @@
     });
 
     publicationCards.forEach(function (card) {
-      var category = card.getAttribute('data-category');
-      var label = publicationCategoryLabels[category] || category;
+      var categories = getPublicationCategories(card);
       var body = card.querySelector('.project-card__body');
       var venue = card.querySelector('.project-card__venue');
       var awardRow = card.querySelector('.project-card__award-row');
-      var existingTag = card.querySelector('.publication-tag');
-      var tag = existingTag || document.createElement('span');
+      var existingTags = card.querySelector('.publication-tags');
+      var tags = existingTags || document.createElement('div');
 
-      tag.className = 'publication-tag';
-      tag.textContent = label;
+      tags.className = 'publication-tags';
+      tags.innerHTML = '';
+      card.classList.toggle('has-multiple-publication-tags', categories.length > 1);
 
-      if (!existingTag && body) {
-        body.insertBefore(tag, awardRow ? awardRow.nextSibling : (venue ? venue.nextSibling : body.firstChild));
+      categories.forEach(function (category) {
+        var tag = document.createElement('span');
+        tag.className = 'publication-tag';
+        tag.textContent = publicationCategoryLabels[category] || category;
+        tags.appendChild(tag);
+      });
+
+      if (!existingTags && body) {
+        body.insertBefore(tags, awardRow ? awardRow.nextSibling : (venue ? venue.nextSibling : body.firstChild));
       }
     });
 
@@ -62,7 +78,7 @@
       });
 
       publicationCards.forEach(function (card) {
-        var matches = filter === 'all' || card.getAttribute('data-category') === filter;
+        var matches = filter === 'all' || getPublicationCategories(card).indexOf(filter) !== -1;
         card.classList.toggle('is-filtered-out', !matches);
       });
 
