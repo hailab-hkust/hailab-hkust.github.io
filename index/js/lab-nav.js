@@ -104,6 +104,12 @@
     applyPublicationFilter('all');
   }
 
+  document.querySelectorAll('.news-list').forEach(function (list) {
+    Array.prototype.slice.call(list.querySelectorAll('.news-item.reveal')).forEach(function (item, index) {
+      item.style.setProperty('--reveal-delay', String((index % 6) * 80) + 'ms');
+    });
+  });
+
   var revealItems = document.querySelectorAll('.reveal');
 
   if (!revealItems.length) {
