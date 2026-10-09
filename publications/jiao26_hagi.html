@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HAGI++: Head-Assisted Gaze Imputation and Generation</title>
+        <link rel="stylesheet" media="all" href="../index/css/main_v2.css" />
+        <style>
+            img.centerContent { max-width: 100%; }
+            .pub_bibtex { white-space: pre-wrap; overflow-wrap: anywhere; }
+        </style>
+        <link rel="stylesheet" media="all" href="../projects/jiao26_hagi/css/owl.carousel.min.css" />
+        <link rel="stylesheet" media="all" href="../projects/jiao26_hagi/css/owl.theme.default.min.css" />
+        <link rel="stylesheet" media="all" href="../projects/jiao26_hagi/css/jquery-ui.min.css" />
+        <script src="../projects/jiao26_hagi/js/jquery-3.4.1.min.js"></script>
+        <script src="../projects/jiao26_hagi/js/jquery-ui.min.js"></script>
+        <script src="../projects/jiao26_hagi/js/fontawesome-5.11.2.js"></script>
+        <script src="../projects/jiao26_hagi/js/main.js"></script>
+        <script src="../projects/jiao26_hagi/js/owl.carousel.min.js"></script>
+        <script src="../projects/jiao26_hagi/js/rot13.js"></script>
+    </head>
+    <body class="header header-location">
+        <div class="wrapper">
+            <div id="unstickyheader" class="unstickyheader">
+                <div class="topbar">
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section margin-top-20 margin-bottom-40">
+                <div class="container">
+                    <h3>HAGI++: Head-Assisted Gaze Imputation and Generation</h3>
+
+                    <h4>
+                        Chuhan Jiao,
+                        <a class="a-int" href="https://cranehzm.github.io/">Zhiming Hu</a>*,
+                        Andreas Bulling
+                    </h4>
+
+                    <h4>
+                        <span class="pub_additional_journal">IEEE Transactions on Visualization and Computer Graphics (TVCG), 2026. Accepted for publication.</span>
+                    </h4>
+
+                    <hr>
+                    <img src="../projects/jiao26_hagi/image/teaser.png" style="height:auto; width:1024px;" class="centerContent" alt="Overview of HAGI++ gaze imputation and generation"><br>
+                    <hr>
+
+                    <h4>Abstract</h4>
+                    Mobile eye-tracking is crucial for capturing human visual attention in real-world and XR settings, supporting research and human-computer interaction. Yet blinks, pupil-detection errors and lighting changes create missing values that hinder gaze analysis. We present HAGI++, a multi-modal diffusion-based imputation method that, for the first time, leverages integrated head-orientation sensors to exploit the natural correlation between head and eye movements. Using a transformer-based diffusion model, it learns cross-modal dependencies between eye and head data and can additionally incorporate wrist/hand motion when such wearable signals are available. Evaluations on the large-scale Nymeria, Ego-Exo4D and HOT3D datasets show that HAGI++ consistently outperforms traditional interpolation and deep-learning time-series imputation baselines. Statistical analysis confirms that its gaze-velocity distributions closely match real human behaviour, yielding realistic imputations. Even when 100% of gaze data are missing (pure gaze generation), HAGI++ exceeds methods that rely on visual inputs and methods that rely on full-body motion capture by incorporating wrist motion from commercial wearables. Our approach enables more complete, accurate eye-gaze recordings in real-world contexts, enhancing gaze-based analysis and interaction across many applications.
+                    <hr>
+
+                    <h4>Links</h4>
+                    <div class="pub_links">
+                        <i class="fa fa-file-pdf"></i><p>Paper: <a class="pub_list" href="../projects/jiao26_hagi/pdf/jiao26_hagi.pdf">paper.pdf</a></p>
+                    </div>
+                    <hr>
+
+                    <h4>BibTeX</h4>
+                    <div class="pub_bibtex bg_grey">@article{jiao2026hagiplusplus,
+	author = {Jiao, Chuhan and Hu, Zhiming and Bulling, Andreas},
+	title = {HAGI++: Head-Assisted Gaze Imputation and Generation},
+	journal = {IEEE Transactions on Visualization and Computer Graphics},
+	year = {2026}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="footer-v1">
+            <div class="copyright custom-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><span class="custom-copyright-container">Last modified: 09/10/2026</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
